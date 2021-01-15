@@ -1,4 +1,4 @@
-let prevMin = 0;
+let prevMin = -1;
 
 function setup() {
 	createCanvas(800,600);
