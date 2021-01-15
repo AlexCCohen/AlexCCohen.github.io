@@ -1,5 +1,7 @@
+let prevMin = 0;
+
 function setup() {
-	createCanvas(800,600); // make an HTML canvas element width x height pixels
+	createCanvas(800,600);
 }
 
 function draw() {
@@ -11,6 +13,11 @@ function draw() {
 	var hr = hour();
 	var min = minute();
 	var sec = second();
+
+	if (sec == 0 && min != prevMin) {
+		console.log(min);
+		prevMin = min;
+	}
 
 	if (sec <= 34) {
 		for (let i = 0; i < sec; ++i) {
